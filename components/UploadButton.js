@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 export default function UploadButton({ selectedRecording, selectedModel, onUploadComplete }) {
     const [uploading, setUploading] = useState(false);
-    const { connected, ipAddress, port } = useSelector(state => state.server);
+    const { ipAddress, port } = useSelector(state => state.server);
     
     // Sélectionner un modèle sur le serveur
     const selectModelOnServer = async (modelName) => {

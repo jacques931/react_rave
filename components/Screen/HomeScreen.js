@@ -17,10 +17,8 @@ export default function HomeScreen() {
       
       // Tentative de connexion au serveur
       try {
-          // const response = await fetch(`http://${ipAddress}:${port}/`);
-          const response = await fetch(`https://851c-2a01-e0a-945-d150-a5d7-286a-ab72-ba05.ngrok-free.app`);
+          const response = await fetch(`http://${ipAddress}:${port}/`);
 
-          
           if (!response.ok) {
               throw new Error('Échec de la connexion au serveur');
           }
@@ -28,8 +26,7 @@ export default function HomeScreen() {
           const data = await response.text();
           console.log('Connexion réussie:', data);
           // Enregistre les informations sur server dans le store
-          dispatch(setServerConfig({ ip: "851c-2a01-e0a-945-d150-a5d7-286a-ab72-ba05.ngrok-free.app", port: "" }));
-          // dispatch(setServerConfig({ ip: ipAddress, port: port }));
+          dispatch(setServerConfig({ ip: ipAddress, port: port }));
           dispatch(setConnected(true));
       } catch (error) {
           console.error('Erreur de connexion:', error);
@@ -47,7 +44,7 @@ export default function HomeScreen() {
           value={ipAddress}
           onChangeText={(text) => dispatch(setServerConfig({ ip: text, port }))}
           placeholder="192.168.1.1"
-          autoCapitalize="none"
+          keyboardType="numeric"
         />
         
         <Text style={styles.label}>Port</Text>

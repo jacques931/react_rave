@@ -11,7 +11,7 @@ import { setSelectedSound, setSelectedModel, setTransformedAudio, setIsPlaying }
 
 export default function UploadRecordingScreen({ navigation }) {
     const dispatch = useDispatch();
-    const { recordings, saveRecording, removeRecording } = useRecordingsStore();
+    const { recordings } = useRecordingsStore();
     
     // Utiliser les états du store Redux
     const { selectedSound, selectedModel, transformedAudio, isPlaying, currentlyPlayingUri } = useSelector(state => state.audio);

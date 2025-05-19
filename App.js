@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 // Composant principal qui affiche le contenu
 function MainContent() {
-  const { connected, ipAddress, port } = useSelector(state => state.server);
+  const { connected } = useSelector(state => state.server);
   
   if (!connected) {
     return (
@@ -29,10 +29,10 @@ function MainContent() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
-            if (route.name === 'Enregistrements') {
-              iconName = focused ? 'mic' : 'mic-outline';
-            } else if (route.name === 'Upload') {
-              iconName = focused ? 'cloud-upload' : 'cloud-upload-outline';
+            if (route.name === 'Studio') {
+              iconName = focused ? 'headset' : 'headset-outline';
+            } else if (route.name === 'Convertisseur') {
+              iconName = focused ? 'sync' : 'sync-outline';
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
@@ -41,10 +41,10 @@ function MainContent() {
           headerShown: false
         })}
       >
-        <Tab.Screen name="Enregistrements">
+        <Tab.Screen name="Studio">
           {(props) => <RecordingScreen {...props} />}
         </Tab.Screen>
-        <Tab.Screen name="Upload">
+        <Tab.Screen name="Convertisseur">
           {(props) => <UploadRecordingScreen {...props} />}
         </Tab.Screen>
       </Tab.Navigator>
