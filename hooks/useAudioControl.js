@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useAudioPlayer } from 'expo-audio';
+import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { Alert } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsPlaying } from '../slice/AudioSlice';
@@ -7,8 +7,16 @@ import { setIsPlaying } from '../slice/AudioSlice';
 // Hook personnalisé pour gérer la lecture audio avec Redux
 export default function useAudioControl() {
     const audioPlayer = useAudioPlayer();
+    const status = useAudioPlayerStatus(audioPlayer);
     const dispatch = useDispatch();
     const { isPlaying, currentlyPlayingUri } = useSelector(state => state.audio);
+    
+    // Détecter la fin de lecture audio avec le status
+    useEffect(() => {
+        if (status?.didJustFinish) {
+            dispatch(setIsPlaying({ isPlaying: false, uri: null }));
+        }
+    }, [status?.didJustFinish, dispatch]);
     
     // Fonction pour jouer un enregistrement
     const playAudio = (uri) => {

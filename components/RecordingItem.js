@@ -7,10 +7,13 @@ import useAudioControl from '../hooks/useAudioControl';
 export default function RecordingItem({ recording, onDelete, selectable = false, isSelected = false, onSelect = null }) {
   const { playAudio, pauseAudio } = useAudioControl();
   const { isPlaying, currentlyPlayingUri } = useSelector(state => state.audio);
+
+  // Déterminer si ce lecteur est en cours de lecture
+  const playing = isPlaying && currentlyPlayingUri === recording.uri;
   
   // Fonction pour gérer la lecture/pause
   const handlePlayPause = () => {
-    if (isPlaying && currentlyPlayingUri === recording.uri) {
+    if (playing) {
       pauseAudio();
     } else {
       playAudio(recording.uri);
@@ -51,13 +54,13 @@ export default function RecordingItem({ recording, onDelete, selectable = false,
         {!selectable && (
           <View style={styles.recordingControls}>
             <Pressable 
-              style={styles.controlButton}
+              style={[styles.controlButton, playing && styles.playingButton]}
               onPress={handlePlayPause}
             >
               <Ionicons 
-                name="play"
+                name={playing ? "pause" : "play"}
                 size={20} 
-                color='#666'
+                color={playing ? '#ffffff' : '#4444ff'}
               />
             </Pressable>
             

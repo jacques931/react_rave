@@ -30,13 +30,13 @@ export default function AudioPlayer({ uri, title, onPlay }) {
             <View style={styles.headerContainer}>
                 <Text style={styles.sectionTitle}>{title}</Text>
                 <Pressable 
-                    style={styles.controlButton}
+                    style={[styles.controlButton, playing && styles.playingButton]}
                     onPress={handlePlayPause}
                 >
                     <Ionicons 
-                        name="play" 
+                        name={playing ? "pause" : "play"} 
                         size={24} 
-                        color="#4444ff"
+                        color={playing ? "#ffffff" : "#4444ff"}
                     />
                 </Pressable>
             </View>
