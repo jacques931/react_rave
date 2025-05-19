@@ -44,5 +44,5 @@ python server.py
 ## Utilisation
 
 1. Lancez l'application et connectez-vous à votre serveur en spécifiant l'adresse IP et le port
-2. Utilisez l'onglet "Enregistrements" pour créer et gérer vos enregistrements audio
-3. Utilisez l'onglet "Upload" pour envoyer vos enregistrements au serveur qui les transformera via le modèle sélectionné
+2. Utilisez l'onglet "Studio" pour créer et gérer vos enregistrements audio
+3. Utilisez l'onglet "Convertisseur" pour envoyer vos enregistrements au serveur qui les transformera via le modèle sélectionné
