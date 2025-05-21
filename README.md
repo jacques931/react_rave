@@ -46,3 +46,13 @@ python server.py
 1. Lancez l'application et connectez-vous à votre serveur en spécifiant l'adresse IP et le port
 2. Utilisez l'onglet "Studio" pour créer et gérer vos enregistrements audio
 3. Utilisez l'onglet "Convertisseur" pour envoyer vos enregistrements au serveur qui les transformera via le modèle sélectionné
+
+---
+
+## Accès rapide via QR Code Expo
+
+Scannez ce QR code avec votre application Expo Go pour accéder rapidement au projet :
+
+![QR Code Expo](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://expo.dev/preview/update?message=update%3A%20readme&updateRuntimeVersion=1.0.0&createdAt=2025-05-21T12%3A33%3A14.953Z&slug=exp&projectId=61090469-f4f3-4cd7-814b-765cdf4bfea6&group=0342fef0-c020-48d1-8d48-eb126370cea1)
+
+[Lien Expo direct](https://expo.dev/preview/update?message=update%3A%20readme&updateRuntimeVersion=1.0.0&createdAt=2025-05-21T12%3A33%3A14.953Z&slug=exp&projectId=61090469-f4f3-4cd7-814b-765cdf4bfea6&group=0342fef0-c020-48d1-8d48-eb126370cea1)
