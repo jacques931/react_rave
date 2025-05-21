@@ -53,6 +53,5 @@ python server.py
 
 Scannez ce QR code avec votre application Expo Go pour accéder rapidement au projet :
 
-![QR Code Expo](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://expo.dev/preview/update?message=update%3A%20readme&updateRuntimeVersion=1.0.0&createdAt=2025-05-21T12%3A33%3A14.953Z&slug=exp&projectId=61090469-f4f3-4cd7-814b-765cdf4bfea6&group=0342fef0-c020-48d1-8d48-eb126370cea1)
+![image](https://github.com/user-attachments/assets/65b78c03-b47c-4308-8796-07de7e0da614)
 
-[Lien Expo direct](https://expo.dev/preview/update?message=update%3A%20readme&updateRuntimeVersion=1.0.0&createdAt=2025-05-21T12%3A33%3A14.953Z&slug=exp&projectId=61090469-f4f3-4cd7-814b-765cdf4bfea6&group=0342fef0-c020-48d1-8d48-eb126370cea1)
