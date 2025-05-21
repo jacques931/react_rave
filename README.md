@@ -4,6 +4,12 @@
 RAVES est une application mobile développée avec React Native et Expo qui permet aux utilisateurs d'enregistrer des fichiers audio, de les sauvegarder localement et de les transformer vers un serveur distant. 
 > **Note :** Ce projet a été réalisé dans le cadre d'un projet scolaire pour démontrer mes compétences techniques et pratiques en développement web.
 
+## Accès rapide via QR Code Expo
+
+Scannez ce QR code avec votre application Expo Go pour accéder rapidement au projet :
+
+![image](https://github.com/user-attachments/assets/65b78c03-b47c-4308-8796-07de7e0da614)
+
 ## Fonctionnalités
 
 - **Connexion à un serveur distant** : Interface de connexion permettant de spécifier l'adresse IP et le port du serveur
@@ -48,10 +54,3 @@ python server.py
 3. Utilisez l'onglet "Convertisseur" pour envoyer vos enregistrements au serveur qui les transformera via le modèle sélectionné
 
 ---
-
-## Accès rapide via QR Code Expo
-
-Scannez ce QR code avec votre application Expo Go pour accéder rapidement au projet :
-
-![image](https://github.com/user-attachments/assets/65b78c03-b47c-4308-8796-07de7e0da614)
-
