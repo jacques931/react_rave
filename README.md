@@ -40,7 +40,7 @@ npm start
 Pour que l'application fonctionne correctement, vous devez également lancer un serveur Flask en local :
 
 1. Assurez-vous d'avoir Python installé sur votre machine
-2. Récupérez le projet Git du serveur :
+2. Récupérez le projet Git du serveur : https://github.com/gnvIRCAM/RAVE-ONNX-Server
 3. Lancez le serveur Flask :
 ```
 python server.py
